@@ -46,9 +46,3 @@ notebook-to-python-converter/
   - `your_notebook_combined.py`
 - If a notebook has **no code cells**, the app will show a friendly message.
 
-## Security
-- This demo keeps uploads local in the `uploads/` folder and created files in `outputs/`. Adjust as needed.
-- Replace `app.secret_key` with a random secret in production.
-
-## License
-MIT
