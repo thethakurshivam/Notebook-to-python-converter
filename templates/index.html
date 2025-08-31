@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notebook to Python file Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Notebook to Python file Converter</h1>
+      <p class="subtitle">Upload a Jupyter Notebook (.ipynb). Get clean, separate .py files for each code cell — plus a combined file.</p>
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash">
+          {% for message in messages %}<li>{{ message }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <main>
+      <form method="POST" enctype="multipart/form-data" class="card">
+        <label for="file" class="file-label">Choose .ipynb file</label>
+        <input id="file" name="file" type="file" accept=".ipynb" required />
+        <button type="submit">Convert & Download</button>
+      </form>
+
+      <section class="howto card">
+        <h2>How it works</h2>
+        <ol>
+          <li>Click “Choose .ipynb file” and select your notebook.</li>
+          <li>Hit “Convert & Download”.</li>
+          <li>You’ll get a ZIP with:
+            <ul>
+              <li>One <code>.py</code> per code cell, named like <code>notebook_cell_001.py</code>.</li>
+              <li>A <code>combined.py</code> that merges all code cells (in order).</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

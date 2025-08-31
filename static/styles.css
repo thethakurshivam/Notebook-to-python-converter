@@ -1,0 +1,242 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html, body { 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; 
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body { 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container { 
+  max-width: 600px; 
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header { 
+  text-align: center; 
+  margin-bottom: 40px; 
+}
+
+h1 { 
+  font-size: 2.5rem; 
+  margin-bottom: 10px; 
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle { 
+  color: rgba(255, 255, 255, 0.8); 
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.card { 
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 15px; 
+  padding: 30px; 
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+form.card { 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.file-label { 
+  font-weight: 600; 
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+input[type="file"] { 
+  background: rgba(255, 255, 255, 0.1); 
+  border: 2px dashed rgba(255, 255, 255, 0.3); 
+  border-radius: 12px; 
+  padding: 20px; 
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[type="file"]:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+button { 
+  padding: 15px 30px; 
+  border-radius: 12px; 
+  border: none; 
+  font-weight: 600; 
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+button:hover { 
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4);
+  background: linear-gradient(45deg, #5b52e8, #8b5cf6);
+}
+
+button:active { 
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.howto h2 { 
+  margin-top: 0; 
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.howto ol { 
+  margin-left: 20px; 
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.howto li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.howto ul {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.howto code { 
+  background: rgba(0, 0, 0, 0.3); 
+  padding: 4px 8px; 
+  border-radius: 6px; 
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  color: #fbbf24;
+  font-size: 0.9rem;
+}
+
+.flash { 
+  list-style: none; 
+  padding: 0; 
+  margin: 20px 0; 
+}
+
+.flash li { 
+  background: rgba(239, 68, 68, 0.2); 
+  padding: 15px 20px; 
+  border-radius: 12px; 
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fecaca;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Loading animation for form submission */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* File input custom styling */
+input[type="file"]::file-selector-button {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: linear-gradient(45deg, #5b52e8, #8b5cf6);
+  transform: translateY(-1px);
+}
