@@ -89,3 +89,6 @@ notebook-to-python-converter/
   - `your_notebook_combined.py`
 - If a notebook has **no code cells**, the app will show a friendly message.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
