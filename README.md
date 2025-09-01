@@ -1,5 +1,7 @@
 # Notebook to Python file Converter (Flask GUI)
 
+🌐 **[Live Demo](https://notebook-to-python-converter.onrender.com/)**
+
 ![App Screenshot](./images/DemoScreenshot.png)
 
 A tiny Flask web app to convert a Jupyter Notebook (`.ipynb`) into **separate Python files** (one per code cell) and an optional **combined** Python file.
@@ -70,7 +72,7 @@ This web application provides a simple and elegant solution for converting Jupyt
 
 ## Project Structure
 ```
-notebook-to-python-converter/
+Notebook-to-python-converter/
 ├─ app.py
 ├─ templates/
 │  └─ index.html
@@ -78,7 +80,10 @@ notebook-to-python-converter/
 │  └─ styles.css
 ├─ utils/
 │  └─ convert.py
-└─ requirements.txt
+├─ images/
+│  └─ DemoScreenshot.png
+├─ requirements.txt
+└─ LICENSE
 ```
 
 
